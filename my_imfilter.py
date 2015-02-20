@@ -36,17 +36,63 @@ def hybridImage(highFreqImg, lowFreqImg, sigmaHigh, sigmaLow):
    return highPassed + lowPassed
    
 if __name__ == "__main__":
-   marilyn = ndimage.imread("marilyn.png", flatten=True)
-   lowPassedMarilyn = lowPass(marilyn, 20)
-   misc.imsave("low-passed-marilyn.png", numpy.real(lowPassedMarilyn))
-   einstein = ndimage.imread("einstein.png", flatten=True)
-   highPassedeinstein = highPass(einstein, 20)
-   misc.imsave("high-passed-einstein.png", numpy.real(highPassedeinstein))
+   image1 = ndimage.imread("bicycle.png", flatten=True)
+   lowPassed_image1 = lowPass(image1, 20)
+   misc.imsave("low-passed-bicycle.png", numpy.real(lowPassed_image1))
+   image2 = ndimage.imread("motorcycle.png", flatten=True)
+   highPassed_image2 = highPass(image2, 20)
+   misc.imsave("high-passed-motorcycle.png", numpy.real(highPassed_image2))
    
-   HI = hybridImage(highPassedeinstein, lowPassedMarilyn, 20, 20)
-   misc.imsave("HybridImage.png", numpy.real(HI))
+   HI = hybridImage(highPassed_image2, lowPassed_image1, 20, 20)
+   misc.imsave("HybridImage1.png", numpy.real(HI))
    
 
+   
+if __name__ == "__main__":
+   image1 = ndimage.imread("marilyn.png", flatten=True)
+   lowPassed_image1 = lowPass(image1, 20)
+   misc.imsave("low-passed-marilyn.png", numpy.real(lowPassed_image1))
+   image2 = ndimage.imread("einstein.png", flatten=True)
+   highPassed_image2 = highPass(image2, 20)
+   misc.imsave("high-passed-einstein.png", numpy.real(highPassed_image2))
+   
+   HI = hybridImage(highPassed_image2, lowPassed_image1, 20, 20)
+   misc.imsave("HybridImage2.png", numpy.real(HI))
+   
 
+if __name__ == "__main__":
+   image1 = ndimage.imread("fish.png", flatten=True)
+   lowPassed_image1 = lowPass(image1, 20)
+   misc.imsave("low-passed-fish.png", numpy.real(lowPassed_image1))
+   image2 = ndimage.imread("submarine.png", flatten=True)
+   highPassed_image2 = highPass(image2, 20)
+   misc.imsave("high-passed-submarine.png", numpy.real(highPassed_image2))
+   
+   HI = hybridImage(highPassed_image2, lowPassed_image1, 20, 20)
+   misc.imsave("HybridImage3.png", numpy.real(HI))
+   
 
+if __name__ == "__main__":
+   image1 = ndimage.imread("plane.png", flatten=True)
+   lowPassed_image1 = lowPass(image1, 20)
+   misc.imsave("low-passed-plane.png", numpy.real(lowPassed_image1))
+   image2 = ndimage.imread("bird.png", flatten=True)
+   highPassed_image2 = highPass(image2, 20)
+   misc.imsave("high-passed-bird.png", numpy.real(highPassed_image2))
+   
+   HI = hybridImage(highPassed_image2, lowPassed_image1, 20, 20)
+   misc.imsave("HybridImage4.png", numpy.real(HI))
+   
+
+if __name__ == "__main__":
+   image1 = ndimage.imread("cat.png", flatten=True)
+   lowPassed_image1 = lowPass(image1, 20)
+   misc.imsave("low-passed-cat.png", numpy.real(lowPassed_image1))
+   image2 = ndimage.imread("dog.png", flatten=True)
+   highPassed_image2 = highPass(image2, 20)
+   misc.imsave("high-passed-dog.png", numpy.real(highPassed_image2))
+   
+   HI = hybridImage(highPassed_image2, lowPassed_image1, 20, 20)
+   misc.imsave("HybridImage5.png", numpy.real(HI))
+   
 
